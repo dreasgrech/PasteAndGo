@@ -1,0 +1,15 @@
+{
+  "name": "Paste and Go",
+  "version": "1",
+  "description": "Paste and Go",
+  "background_page": "background.html",
+  "permissions": ["contextMenus", "clipboardRead"],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["jquery-1.7.1.min.js", "contentscript.js"]
+    }
+  ]
+}
+
