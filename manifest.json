@@ -1,6 +1,6 @@
 {
   "name": "Paste and Go",
-  "version": "1",
+  "version": "1.2",
   "description": "Paste and Go",
   "background_page": "background.html",
   "permissions": ["contextMenus", "clipboardRead"],
@@ -10,6 +10,9 @@
       "matches": ["http://*/*","https://*/*", "file://*/*"],
       "js": ["jquery-1.7.1.min.js", "contentscript.js"]
     }
-  ]
+  ],
+ "icons": {
+    "16": "contextmenuicon.png"
+  }
 }
 
