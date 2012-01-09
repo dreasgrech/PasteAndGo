@@ -2,6 +2,8 @@ var clickedEl, getClosestButton = function (el) {
 	// TODO: Maybe you can add a limit to the number of levels it traverses for the button
         while ((el = el.parent()).length) {
             var buttons = el.find(":button, input[type=submit]"); // :button -> "input[type=button], button"
+	    buttons = Array.prototype.reverse.call(buttons);
+
             if (buttons.length) {
                 return buttons.eq(0);
             }

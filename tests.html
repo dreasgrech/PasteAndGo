@@ -5,15 +5,20 @@
 		<script>
 		window.onload = function () {
 			var form = document.getElementById('testform'), 
-			    button = document.getElementById('button');
+			    correctbutton = document.getElementById('correctbutton'),
+			    wrongbutton = document.getElementById('wrongbutton');
 
 			form.onsubmit = function (e) {
 				e.preventDefault();
 				alert('Form submitted');
 			};
 
-			button.onclick = function () {
-				alert('Button clicked');
+			correctbutton.onclick = function () {
+				alert('Correct Button clicked');
+			};
+
+			wrongbutton.onclick = function () {
+				alert('Wrong button clicked');
 			};
 		};
 		</script>
@@ -27,8 +32,9 @@
 
 		<h2>Test 2 - Closest button</h2>
 		<div>
+			<input type="button" id="wrongbutton"/ value="Wrong button"/>
 			<input value="Paste and Go"/>
-			<input type="button" id="button"/ value="Search"/>
+			<input type="button" id="correctbutton"/ value="Correct button"/>
 		</div>
 
 	</body>

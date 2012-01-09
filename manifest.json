@@ -1,6 +1,6 @@
 {
   "name": "Paste and Go",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Paste and Go",
   "background_page": "background.html",
   "permissions": ["contextMenus", "clipboardRead"],
