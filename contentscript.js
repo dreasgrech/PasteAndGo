@@ -6,10 +6,12 @@ var clickedEl, getClosestButton = function (el) {
                 return buttons.eq(0);
             }
         }
+	// Didn't find any buttons
 }, clickTheButton = function (button) {
 	if (button) {
 		button.trigger('click');
 		console.log('Clicking on the closest button');
+		return true;
 	}
 }, submitClosestForm = function(box) { 
 	var closestForm;
@@ -37,8 +39,10 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
     if (request.action === "flushAndSubmit") {
         box.val(request.data); // paste the data in the input box
 
-	if (!submitClosestForm(box)) { // If we didn't find a form, try clicking on the closest button
-		clickTheButton(getClosestButton(box));
+	if (!submitClosestForm(box)) {
+		if (!clickTheButton(getClosestButton(box))) {
+			console.log('No form to submit or button to click was found.');
+		}
 	}
     }
 });
