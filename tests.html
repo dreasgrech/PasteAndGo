@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<script>
+		window.onload = function () {
+			var form = document.getElementById('testform'), 
+			    button = document.getElementById('button');
+
+			form.onsubmit = function (e) {
+				e.preventDefault();
+				alert('Form submitted');
+			};
+
+			button.onclick = function () {
+				alert('Button clicked');
+			};
+		};
+		</script>
+
+		<h1>Paste and Go - A Chrome extension</h1>
+
+		<h2>Test 1 - Closest form</h2>
+		<form id="testform">
+			<input value="Paste and Go"/>
+		</form>
+
+		<h2>Test 2 - Closest button</h2>
+		<div>
+			<input value="Paste and Go"/>
+			<input type="button" id="button"/ value="Search"/>
+		</div>
+
+	</body>
+
+</html>

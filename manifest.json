@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "all_frames": true,
-      "matches": ["http://*/*","https://*/*"],
+      "matches": ["http://*/*","https://*/*", "file://*/*"],
       "js": ["jquery-1.7.1.min.js", "contentscript.js"]
     }
   ]
